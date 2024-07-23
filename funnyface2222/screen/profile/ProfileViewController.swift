@@ -71,6 +71,18 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
         callAPIUserEvent()
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//           super.viewWillAppear(animated)
+//           // Đảm bảo TabBar không bị ẩn khi màn hình này xuất hiện
+//           self.hidesBottomBarWhenPushed = false
+//       }
+//       
+//       override func viewWillDisappear(_ animated: Bool) {
+//           super.viewWillDisappear(animated)
+//           // Reset lại thuộc tính khi màn hình này biến mất
+//           self.hidesBottomBarWhenPushed = true
+//       }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -221,6 +233,7 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
         let vc = ChangerAvatarViewController(nibName: "ChangerAvatarViewController", bundle: nil)
         //vc.data = self.dataUserEvent
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        vc.hidesBottomBarWhenPushed = false
         self.present(vc, animated: true, completion: nil)
         
     }

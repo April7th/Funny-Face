@@ -37,6 +37,10 @@ class ChangerAvatarViewController: UIViewController {
                         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
                         self.present(vc, animated: true, completion: nil)
                             print("dungg")
+//                        
+//                        let vc = TabbarViewController()
+//                        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//                        self.present(vc, animated: true, completion: nil)
                         
                     }
                     
