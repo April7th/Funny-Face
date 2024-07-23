@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C72B9CAB-606E-46FE-80CC-7742F8B55E7E"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D53A28C-CED9-4BC5-B2CD-3098A89E9F5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/home/cell/albumswaped.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "listCate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D53A28C-CED9-4BC5-B2CD-3098A89E9F5F - 92acc9d883635710"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  uuid = "7D53A28C-CED9-4BC5-B2CD-3098A89E9F5F - 7c50584780ac3c57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;funnyface2222.ResultVideoModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "93">
+               </Location>
+               <Location
+                  uuid = "7D53A28C-CED9-4BC5-B2CD-3098A89E9F5F - dd014d8e8ae7c23c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Downloads/funnyface-ios-11-mar-2024/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "7D53A28C-CED9-4BC5-B2CD-3098A89E9F5F - 33fddc118928a9bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;funnyface2222.ResultVideoModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Downloads/funnyface-ios-11-mar-2024/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06E98EB4-B017-42F7-BC3F-BC1BDF2CBB54"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/home/cell/albumswaped.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "listCate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06E98EB4-B017-42F7-BC3F-BC1BDF2CBB54 - 25264b50d147c6a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1833">
+               </Location>
+               <Location
+                  uuid = "06E98EB4-B017-42F7-BC3F-BC1BDF2CBB54 - 92acc9d883635710"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  uuid = "06E98EB4-B017-42F7-BC3F-BC1BDF2CBB54 - 6a8bcf06d8c35392"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Downloads/funnyface-ios-11-mar-2024/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1684">
+               </Location>
+               <Location
+                  uuid = "06E98EB4-B017-42F7-BC3F-BC1BDF2CBB54 - dd014d8e8ae7c23c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIAlertAction&gt;) -&gt; () in funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Downloads/funnyface-ios-11-mar-2024/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8D413189-2CE3-4659-A4E8-140ABCF3C7F8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/home/cell/albumswaped.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "listCate()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8D413189-2CE3-4659-A4E8-140ABCF3C7F8 - 25264b50d147c413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "311">
+               </Location>
+               <Location
+                  uuid = "8D413189-2CE3-4659-A4E8-140ABCF3C7F8 - 25264b50d147c413"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Documents/funnyface_ios/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "964">
+               </Location>
+               <Location
+                  uuid = "8D413189-2CE3-4659-A4E8-140ABCF3C7F8 - 6a8bcf06d8c3517f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "funnyface2222.albumswaped.listCate() -&gt; ()"
+                  moduleName = "funnyface2222"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/khongtinduoc/Downloads/funnyface-ios-11-mar-2024/funnyface2222/screen/home/cell/albumswaped.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "244D5818-C316-4337-BCF1-4392C7F7BD03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/mainscreen/Video/albumvideo/AlbumvideoController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "listCate()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C1D285B8-09D5-4DEE-8FA1-D9C5B73DDD2D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/mainscreen/Video/albumvideo/AlbumvideoController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3C9AD88-2EDC-4439-ABA9-E0E5607EC077"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/mainscreen/Video/mhchinhController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A81717F4-915D-45C6-AF85-40267E2765A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "funnyface2222/screen/mainscreen/Video/cell/swaplistvd/swapvideo2.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "318"
+            endingLineNumber = "318"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwapVideoDetailVC" customModule="funnyface2222" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonBack" destination="nep-xy-9a6" id="eTh-Xq-DcH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nep-xy-9a6">
+                    <rect key="frame" x="30" y="50" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="Jbb-ro-4Jd"/>
+                        <constraint firstAttribute="height" constant="45" id="isX-gZ-1dD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrow-left"/>
+                    <connections>
+                        <action selector="BackApp" destination="-1" eventType="touchDown" id="ICA-kK-YkT"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ8-QK-hno">
+                    <rect key="frame" x="148.66666666666666" y="750" width="95.666666666666657" height="35"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="continute">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="nextdd" destination="-1" eventType="touchDown" id="qDl-sj-3Sb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="labelColor"/>
+            <constraints>
+                <constraint firstItem="TZ8-QK-hno" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4ri-72-dFr"/>
+                <constraint firstItem="nep-xy-9a6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="8OP-2a-Gfz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TZ8-QK-hno" secondAttribute="bottom" constant="33" id="mGD-mK-4KB"/>
+                <constraint firstItem="nep-xy-9a6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vKW-nx-eOW"/>
+            </constraints>
+            <point key="canvasLocation" x="58.778625954198468" y="-33.098591549295776"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow-left" width="24" height="24.333333969116211"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
