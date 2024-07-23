@@ -101,8 +101,12 @@ class ChangePassController: BaseViewController {
                             }
                         }
                     }
-                    let storyboard = UIStoryboard(name: "mainpage", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "mhthunhat") as! mhthunhat
+//                    let storyboard = UIStoryboard(name: "mainpage", bundle: nil)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "mhthunhat") as! mhthunhat
+//                    vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//                    self.present(vc, animated: true, completion: nil)
+                    
+                    let vc = TabbarViewController()
                     vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
                     self.present(vc, animated: true, completion: nil)
                  
