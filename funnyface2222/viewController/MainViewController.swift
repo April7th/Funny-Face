@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
                 self.present(vc, animated: true, completion: nil)
             } else {
-                //                        self.navigationController?.setRootViewController(viewController: MainSwapfaceViewController(),
+                //  self.navigationController?.setRootViewController(viewController: MainSwapfaceViewController(),
                 //                                                                         controllerType: MainSwapfaceViewController.self)
 //                let storyboard = UIStoryboard(name: "mainpage", bundle: nil)
 //                let vc = storyboard.instantiateViewController(withIdentifier: "mhthunhat") as! mhthunhat

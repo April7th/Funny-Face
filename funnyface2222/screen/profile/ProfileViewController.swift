@@ -55,14 +55,14 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var ipRegisterLabel: UILabel!
     @IBOutlet weak var deviceRegisterLabel: UILabel!
-
+    
     @IBOutlet weak var countCommentLabel: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var removeAccountButton: UIButton!
     @IBOutlet weak var ButtonAlert: UIButton!
     @IBOutlet weak var ButtonchangeAvatar: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         backgroundView.backgroundColor = .black
@@ -79,7 +79,7 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
         
         buttonSearch.setTitle("", for: .normal)
         ButtonchangeAvatar.setTitle("", for: .normal)
-       // buttonCancel.setTitle("Cancel", for: .normal)
+        // buttonCancel.setTitle("Cancel", for: .normal)
         buttonLogout.setTitle("Logout", for: .normal)
         buttonRemoveAccount.setTitle("Remove My Account?", for: .normal)
         buttonEvent.setTitle("", for: .normal)
@@ -132,7 +132,7 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
                     let escapedString = success.link_avatar?.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
                     if let url = URL(string: escapedString ?? "") {
                         let processor = DownsamplingImageProcessor(size: self.avatarImage.bounds.size)
-                                     |> RoundCornerImageProcessor(cornerRadius: 20)
+                        |> RoundCornerImageProcessor(cornerRadius: 20)
                         self.avatarImage.kf.indicatorType = .activity
                         self.avatarImage.kf.setImage(
                             with: url,
@@ -158,13 +158,13 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
                         let alert = UIAlertController(title: "Error Get Data", message: message, preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                             switch action.style{
-                                case .default:
+                            case .default:
                                 AppConstant.logout()
                                 self.navigationController?.pushViewController(loginView(nibName: "loginView", bundle: nil), animated: true)
-                                case .cancel:
+                            case .cancel:
                                 AppConstant.logout()
                                 self.navigationController?.pushViewController(loginView(nibName: "loginView", bundle: nil), animated: true)
-                                case .destructive:
+                            case .destructive:
                                 AppConstant.logout()
                                 self.navigationController?.pushViewController(loginView(nibName: "loginView", bundle: nil), animated: true)
                             }
@@ -222,7 +222,7 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
         //vc.data = self.dataUserEvent
         vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
         self.present(vc, animated: true, completion: nil)
-            
+        
     }
     @IBAction func clickSearch(_ sender: Any) {
         APIService.shared.APISearchUser(nameSearch: userNameTextField.text ?? "" ) { result, error in
@@ -233,9 +233,17 @@ class ProfileViewController: UIViewController ,SETabItemProvider{
     }
     
     @IBAction func LogOutBtn(_ sender: Any) {
-        AppConstant.logout()
-        self.navigationController?.pushViewController(loginView(nibName: "loginView", bundle: nil), animated: true)
-       
+         AppConstant.logout()
+        //        self.navigationController?.pushViewController(loginView(nibName: "loginView", bundle: nil), animated: true)
+        
+        if AppConstant.userId == nil {
+            //                        self.navigationController?.pushViewController(LoginViewController(nibName: "LoginViewController", bundle: nil), animated: true)
+            let storyboard = UIStoryboard(name: "login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginView") as! loginView
+            vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+            self.present(vc, animated: true, completion: nil)
+            
+        }
         
     }
 }
@@ -258,10 +266,10 @@ extension ProfileViewController: UITableViewDataSource {
             }
             let url = URL(string: listVideoSwaped[indexPath.row].link_image ?? "")
             let processor = DownsamplingImageProcessor(size: cell.avatarImage.bounds.size)
-                         |> RoundCornerImageProcessor(cornerRadius: 20)
+            |> RoundCornerImageProcessor(cornerRadius: 20)
             cell.avatarImage.kf.indicatorType = .activity
             cell.dateLabel.textColor = .white
-                    cell.descriptionLabel.textColor = .white
+            cell.descriptionLabel.textColor = .white
             cell.avatarImage.kf.setImage(
                 with: url,
                 placeholder: UIImage(named: "placeholderImage"),
@@ -302,7 +310,7 @@ extension ProfileViewController: UITableViewDataSource {
         }
         let url = URL(string: listUserSearch[indexPath.row].link_avatar ?? "")
         let processor = DownsamplingImageProcessor(size: cell.imageAvatar.bounds.size)
-                     |> RoundCornerImageProcessor(cornerRadius: 20)
+        |> RoundCornerImageProcessor(cornerRadius: 20)
         cell.imageAvatar.kf.indicatorType = .activity
         cell.imageAvatar.kf.setImage(
             with: url,
@@ -342,7 +350,7 @@ extension ProfileViewController: UITableViewDelegate{
         }
         return 150
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isVideoSeleced == true{
             let vc = DetailSwapVideoVC(nibName: "DetailSwapVideoVC", bundle: nil)
@@ -357,7 +365,7 @@ extension ProfileViewController: UITableViewDelegate{
             vc.itemDataSend = itemDataSend
             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
             self.present(vc, animated: true, completion: nil)
-        
+            
         }else{
             if isSearchUser == false{
                 let vc = DetailEventsViewController(data: dataRecentCommemt[indexPath.row].id_toan_bo_su_kien ?? 0 )
