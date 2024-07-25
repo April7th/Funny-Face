@@ -30,7 +30,7 @@ class EventViewController: BaseViewController {
     var backButton: UIButton = {
           let btn = UIButton(frame: CGRect(x:10, y: 30,width : Int(40), height : 40))
           btn.setImage(UIImage(named: "backbutton"), for: .normal)
-          btn.addTarget(self, action: #selector(tapToBack), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(tapToBack), for: .touchUpInside)
           return btn
       }()
     func callApiProfile() {
@@ -112,7 +112,7 @@ class EventViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonBack.setTitle("", for: .normal)
+        buttonBack.setTitle("Back", for: .normal)
         buttonSearch.setTitle("", for: .normal)
         buttonNextSearch.setTitle("", for: .normal)
         setupUI()
@@ -122,9 +122,13 @@ class EventViewController: BaseViewController {
             timeEnd = Date(timeInterval: dataDetail[0].real_time?.toDate(format: "yyyy-MM-dd, HH:mm:ss").timeIntervalSince(Date()) ?? 100.00 , since: Date())
             addTimerView()
         }
-        buttonSearch.setTitle("", for: .normal)
-        buttonNextSearch.setTitle("", for: .normal)
-        buttonBack.setTitle("", for: .normal)
+//        buttonSearch.setTitle("", for: .normal)
+//        buttonNextSearch.setTitle("", for: .normal)
+//        buttonBack.setTitle("", for: .normal)
+    }
+    
+    @IBAction func backToView(_ sender: Any){
+        self.dismiss(animated: true)
     }
     
     override func setupUI() {

@@ -84,7 +84,7 @@ extension StoryboardPageTabMenuViewController: PageMenuControllerDataSource {
 
                 //mainTabbar.present(vc, animated: true, completion: nil)
 //                let storyboard = UIStoryboard(name: "mhchinh", bundle: nil)
-//                let controller = storyboard.instantiateViewController(withIdentifier: "ImageMainViewController") as! ImageMainViewController
+//                let controller = storyboasadrd.instantiateViewController(withIdentifier: "ImageMainViewController") as! ImageMainViewController
 //
 //                controller.title = "Storyboard #\(i) (\(title))"
 //                //ImageMainViewController

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,8 +101,18 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAa-ek-KfX">
                             <rect key="frame" x="0.0" y="64" width="393" height="20"/>
                             <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWa-UR-6Lu">
+                                    <rect key="frame" x="19.999999999999996" y="-7" width="61.666666666666657" height="34.333333333333336"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Back">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="backToView:" destination="-1" eventType="touchUpInside" id="fRO-3S-Hl4"/>
+                                    </connections>
+                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-88-IoO">
-                                    <rect key="frame" x="15.999999999999996" y="-1.6666666666666572" width="60.666666666666657" height="23.333333333333332"/>
+                                    <rect key="frame" x="166.33333333333334" y="-1.6666666666666572" width="60.666666666666657" height="23.333333333333332"/>
                                     <fontDescription key="fontDescription" name="RobotoSlab-Medium" family="Roboto Slab" pointSize="20"/>
                                     <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -110,9 +120,11 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
+                                <constraint firstItem="WWa-UR-6Lu" firstAttribute="leading" secondItem="MAa-ek-KfX" secondAttribute="leading" constant="20" id="00E-7h-elM"/>
                                 <constraint firstItem="XNJ-88-IoO" firstAttribute="centerY" secondItem="MAa-ek-KfX" secondAttribute="centerY" id="P0r-0w-rUr"/>
-                                <constraint firstItem="XNJ-88-IoO" firstAttribute="leading" secondItem="MAa-ek-KfX" secondAttribute="leading" constant="16" id="eeK-7B-DOc"/>
+                                <constraint firstItem="WWa-UR-6Lu" firstAttribute="centerY" secondItem="MAa-ek-KfX" secondAttribute="centerY" id="bz4-31-Esp"/>
                                 <constraint firstAttribute="height" constant="20" id="hvs-SS-Ibd"/>
+                                <constraint firstItem="XNJ-88-IoO" firstAttribute="centerX" secondItem="MAa-ek-KfX" secondAttribute="centerX" id="rLY-6S-gW7"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -189,7 +201,9 @@
                         <constraint firstAttribute="width" constant="36" id="jOD-UV-93d"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" image="back"/>
+                    <buttonConfiguration key="configuration" style="plain" image="back" title="Back">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="BackApp:" destination="-1" eventType="touchDown" id="nHi-9w-HJ2"/>
                     </connections>
