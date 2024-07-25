@@ -41,6 +41,8 @@ class HomeMainView: UIViewController,SETabItemProvider {
         cacluachon.register(UINib(nibName: "phantrencell", bundle: nil), forCellWithReuseIdentifier: "phantrencell")
         cacluachon.register(UINib(nibName: "phanduoicell", bundle: nil), forCellWithReuseIdentifier: "phanduoicell")
         // Do any additional setup after loading the view.
+        
+        
     }
     
 
@@ -91,12 +93,14 @@ extension HomeMainView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         if indexPath.row == 0{
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "phantrencell", for: indexPath) as! phantrencell
         
             APIService.shared.listAllVideoSwaped(page:1){response,error in
                 cell.listTemplateVideo = response
                 cell.cacluachon2.reloadData()
             }
+            cell.customParentViewController = self
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "phanduoicell", for: indexPath) as! phanduoicell

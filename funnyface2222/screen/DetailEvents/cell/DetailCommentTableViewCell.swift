@@ -51,6 +51,10 @@ class DetailCommentTableViewCell: UITableViewCell {
     }
     
     @IBAction func blockAccountPro(){
+        print(KeychainWrapper.standard.integer(forKey: "number_user"))
+        print(KeychainWrapper.standard.integer(forKey: "saved_login_account"))
+
+        
         if let number_user: Int = KeychainWrapper.standard.integer(forKey: "number_user"){
             let number_userPro = number_user + 1
             KeychainWrapper.standard.set(number_userPro, forKey: "number_user")

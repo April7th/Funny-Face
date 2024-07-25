@@ -15,11 +15,36 @@
 import UIKit
 import Kingfisher
 
+
+
+
 class phantrencell: UICollectionViewCell {
     var listTemplateVideo : [ResultVideoModel] = [ResultVideoModel]()
+    
+    var customParentViewController: UIViewController?
+
     @IBOutlet weak var cacluachon2:UICollectionView!
    
    // @IBOutlet weak var showmore:UIButton!
+    @IBOutlet weak var createNewProject: UIButton!
+
+    
+    @IBAction func createNewProject(_ sender: UIButton) {
+//        let vc = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
+//        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+//        self.present(vc, animated: true, completion: nil)
+//
+        if let parentVC = customParentViewController {
+                    let secondVC = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
+                    secondVC.modalPresentationStyle = .fullScreen
+                    parentVC.present(secondVC, animated: true, completion: nil)
+                }
+
+       
+    }
+    
+   
+    
     @IBAction func nextdd(){
         if let parentVC = findParentViewController(of: UIViewController.self) {
             let storyboard = UIStoryboard(name: "HomeStaboad", bundle: nil)
@@ -40,8 +65,12 @@ class phantrencell: UICollectionViewCell {
        // showmore.layer.borderWidth = 0
        
       
+        
+        
         cacluachon2.register(UINib(nibName: "hightlightmain", bundle: nil), forCellWithReuseIdentifier: "hightlightmain")
         // Do any additional setup after loading the view.
+        createNewProject.layer.cornerRadius = 10
+                createNewProject.clipsToBounds = true
     }
     
 

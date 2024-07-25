@@ -159,7 +159,7 @@ class DetailEventsViewController: UIViewController {
                 if let number_user: Int = KeychainWrapper.standard.integer(forKey: "number_user"){
                     for item in 0..<number_user{
                         let idUserNumber = "id_user_" + String(item)
-                        if let idUser: String = KeychainWrapper.standard.string(forKey: idUserNumber){
+                        if let idUser: String = KeychainWrapper.standard.string(forKey: "idUserNumber"){
                             var kiemtra = 0
                             for itemDataComment in dataNewComment{
                                 if (itemDataComment.noi_dung_cmt)?.urlEncoded == idUser{
@@ -177,8 +177,16 @@ class DetailEventsViewController: UIViewController {
             }
         }
     }
+    @IBAction func enterCommentBtn(_ sender: Any) {
+        enterComments()
+    }
+    
     
     @IBAction func postCommentBtn(_ sender: Any) {
+      enterComments()
+    }
+    
+    private func enterComments() {
         guard commentTextField.text != "" else { return }
         let param = ["noi_dung_cmt": commentTextField.text.asStringOrEmpty(),
                      "id_toan_bo_su_kien": "\(idToanBoSuKien) ",

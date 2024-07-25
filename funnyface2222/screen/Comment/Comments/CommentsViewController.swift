@@ -292,15 +292,21 @@ extension CommentsViewController: UICollectionViewDelegate, UICollectionViewData
                 var dataNewComment : [DataComment] = self.dataComment
                 if let number_user: Int = KeychainWrapper.standard.integer(forKey: "number_user"){
                     for item in 0..<number_user{
+                        print("iteam = \(item)")
                         let idUserNumber = "id_user_" + String(item)
                         if let idUser: String = KeychainWrapper.standard.string(forKey: idUserNumber){
+                            print("idUser = \(idUser)")
                             var kiemtra = 0
                             for itemDataComment in dataNewComment{
                                 if (itemDataComment.noi_dung_cmt)?.urlEncoded == idUser{
                                     dataNewComment.remove(at: kiemtra)
+                                    print("dataNewComment = \(dataNewComment)")
                                     kiemtra = kiemtra - 1
+                                    print("kiem tra tren: \(kiemtra)")
                                 }else{
                                     kiemtra = kiemtra + 1
+                                    print("kiem tra duoi: \(kiemtra)")
+
                                 }
                             }
                         }
@@ -311,6 +317,7 @@ extension CommentsViewController: UICollectionViewDelegate, UICollectionViewData
                 self.collectionView.reloadData()
             }
         }
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 300

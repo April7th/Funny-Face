@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,12 +34,15 @@
                                 <rect key="frame" x="8" y="45.333333333333329" width="238.66666666666666" height="57.333333333333329"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugL-Pn-XAz">
-                                <rect key="frame" x="26" y="112.66666666666666" width="166" height="35"/>
+                                <rect key="frame" x="19.999999999999986" y="112.66666666666666" width="229.66666666666663" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="create new project">
+                                <buttonConfiguration key="configuration" style="plain" title="New Project">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createNewProject:" destination="64w-hT-JoW" eventType="touchUpInside" id="Vkf-71-0s0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -47,12 +50,13 @@
                             <constraint firstItem="ar7-zO-Hzs" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" id="3vB-tA-SOg"/>
                             <constraint firstItem="ar7-zO-Hzs" firstAttribute="top" secondItem="gGj-hJ-4Nz" secondAttribute="top" id="4dE-rZ-L06"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" constant="8" id="8UH-R7-M7p"/>
+                            <constraint firstItem="XdJ-8a-ft0" firstAttribute="leading" secondItem="ugL-Pn-XAz" secondAttribute="trailing" constant="50" id="BeF-EG-vgN"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="height" secondItem="ar7-zO-Hzs" secondAttribute="height" multiplier="0.36" id="BrA-6v-WNH"/>
                             <constraint firstAttribute="trailing" secondItem="XdJ-8a-ft0" secondAttribute="trailing" constant="8" id="DLx-gP-Jey"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="top" secondItem="Jt0-kY-i5U" secondAttribute="bottom" constant="8" id="Dhs-JH-ySz"/>
                             <constraint firstItem="ugL-Pn-XAz" firstAttribute="top" secondItem="4k5-8E-qOH" secondAttribute="bottom" constant="10" id="HaT-hf-D5b"/>
                             <constraint firstItem="Jt0-kY-i5U" firstAttribute="height" secondItem="ar7-zO-Hzs" secondAttribute="height" multiplier="0.17" id="ISh-dC-HhO"/>
-                            <constraint firstItem="ugL-Pn-XAz" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" constant="26" id="L2s-YS-tWZ"/>
+                            <constraint firstItem="ugL-Pn-XAz" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" constant="20" id="O0k-DU-6a2"/>
                             <constraint firstItem="Jt0-kY-i5U" firstAttribute="top" secondItem="gGj-hJ-4Nz" secondAttribute="top" constant="10" id="S2i-v6-aeh"/>
                             <constraint firstItem="Jt0-kY-i5U" firstAttribute="width" secondItem="ar7-zO-Hzs" secondAttribute="width" multiplier="0.36" id="alF-q9-IE3"/>
                             <constraint firstAttribute="trailing" secondItem="ar7-zO-Hzs" secondAttribute="trailing" id="cWM-j7-Trt"/>
@@ -69,7 +73,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lty-XH-D9R">
                                 <rect key="frame" x="0.0" y="0.0" width="511" height="36"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hightlight video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-Il-z1E">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hightlight video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1US-Il-z1E">
                                         <rect key="frame" x="8" y="0.0" width="204.33333333333334" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -78,7 +82,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syX-QZ-flM">
                                         <rect key="frame" x="334" y="0.0" width="177" height="36"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="show more">
+                                        <buttonConfiguration key="configuration" style="plain" title=" Show more">
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -141,6 +145,7 @@
             <size key="customSize" width="543" height="531"/>
             <connections>
                 <outlet property="cacluachon2" destination="Edu-F2-T1X" id="ptl-Kv-XDa"/>
+                <outlet property="createNewProject" destination="ugL-Pn-XAz" id="0jo-Ke-w5n"/>
             </connections>
             <point key="canvasLocation" x="-525.95419847328242" y="-1289.7887323943662"/>
         </collectionViewCell>
