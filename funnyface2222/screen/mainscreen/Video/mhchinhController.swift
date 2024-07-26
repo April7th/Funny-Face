@@ -16,6 +16,8 @@ class mhchinhController: UIViewController,SETabItemProvider {
     
     @IBOutlet weak var theloaiclv:UICollectionView!
     @IBOutlet weak var cacluachon:UICollectionView!
+    
+    @IBOutlet weak var createYourOwnVideoLabel: UILabel!
     var indexCategoriesSelected = 0
 
     @IBAction func nextdd(){
@@ -39,6 +41,9 @@ class mhchinhController: UIViewController,SETabItemProvider {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupUI()
+        
         buttonnewproject.setTitle("", for: .normal)
         
         cacluachon.register(UINib(nibName: "cacluachonclv", bundle: nil), forCellWithReuseIdentifier: "cacluachonclv")
@@ -83,6 +88,10 @@ class mhchinhController: UIViewController,SETabItemProvider {
             self.listTemplateVideo_japan = response
             self.cacluachon.reloadData()
         }
+    }
+    
+    private func setupUI() {
+        createYourOwnVideoLabel.font = .quickSandBold(size: 20)
     }
 }
 

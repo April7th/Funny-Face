@@ -14,6 +14,7 @@ class thanhphanconclv: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        labelName.font = .quickSandBold(size: 17)
     }
 
 }

@@ -13,7 +13,9 @@ class hightlightmain: UICollectionViewCell {
     @IBOutlet weak var labels:UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        labels.font = .quickSandBold(size: 14)
+        
     }
 
 }

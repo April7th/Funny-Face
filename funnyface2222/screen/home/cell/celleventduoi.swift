@@ -21,6 +21,20 @@ class celleventduoi: UICollectionViewCell {
         imageUserAvatar.layer.cornerRadius = imageUserAvatar.bounds.width / 2
         imageUserAvatar.clipsToBounds = true
         // Initialization code
+        
+        setupUI()
     }
+    
+    private func setupUI() {
+        labelUserName.font = .quickSandBold(size: 14)
+        lablenamesk2.font = .quickSandSemiBold(size: 12)
+        lablenamesk3.font = .quickSandBold(size: 12)
+        lablenamesk4.font = .quickSandBold(size: 12)
+        lablenamesk5.font = .quickSandBold(size: 12)
+        lablenamesk.font = .starBorn(size: 20)
+
+    }
+    
+    
 
 }

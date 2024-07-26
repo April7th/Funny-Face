@@ -65,6 +65,8 @@ class DetailEventsViewController: UIViewController {
         commentTextField.delegate = self
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.ActionClickToSubSuKien))
         self.viewDetailSuKien.addGestureRecognizer(gesture)
+        
+        
     }
     @objc func ActionClickToSubSuKien(sender : UITapGestureRecognizer) {
         let vc = EventViewController(data:idToanBoSuKien, idsukien: idToanBoSuKien)
@@ -116,6 +118,12 @@ class DetailEventsViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         detailImage.addGestureRecognizer(tapGesture)
         detailImage.isUserInteractionEnabled = true
+        
+        nameDetailLabel.font = .starBorn(size: 16)
+        
+        descriptionLabel.font = .quickSandBold(size: 14)
+        
+       
     }
     
     

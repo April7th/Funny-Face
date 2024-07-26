@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B710440B2C53B5340093FDFE /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71044052C53B5340093FDFE /* Quicksand-Bold.ttf */; };
+		B710440C2C53B5340093FDFE /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71044062C53B5340093FDFE /* Quicksand-Light.ttf */; };
+		B710440D2C53B5340093FDFE /* Quicksand-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71044072C53B5340093FDFE /* Quicksand-Medium.ttf */; };
+		B710440E2C53B5340093FDFE /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71044082C53B5340093FDFE /* Quicksand-Regular.ttf */; };
+		B710440F2C53B5340093FDFE /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B71044092C53B5340093FDFE /* Quicksand-SemiBold.ttf */; };
+		B71044112C53BB360093FDFE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71044102C53BB360093FDFE /* Fonts.swift */; };
+		B75C30692C53D19C00B60DB2 /* Starborn.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B75C30662C53D19C00B60DB2 /* Starborn.ttf */; };
 		CE4311AC50DD594411F5C51F /* Pods_funnyface2222.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3A400DC692F4EF37497AE5 /* Pods_funnyface2222.framework */; };
 		E6111ECB2B68E58500BD49AA /* newtemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6111EC92B68E58500BD49AA /* newtemplate.swift */; };
 		E6111ECC2B68E58500BD49AA /* newtemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6111ECA2B68E58500BD49AA /* newtemplate.xib */; };
@@ -203,6 +210,13 @@
 
 /* Begin PBXFileReference section */
 		6B9A5286F424308C091C593A /* Pods-funnyface2222.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-funnyface2222.release.xcconfig"; path = "Target Support Files/Pods-funnyface2222/Pods-funnyface2222.release.xcconfig"; sourceTree = "<group>"; };
+		B71044052C53B5340093FDFE /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		B71044062C53B5340093FDFE /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		B71044072C53B5340093FDFE /* Quicksand-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Medium.ttf"; sourceTree = "<group>"; };
+		B71044082C53B5340093FDFE /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
+		B71044092C53B5340093FDFE /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
+		B71044102C53BB360093FDFE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		B75C30662C53D19C00B60DB2 /* Starborn.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starborn.ttf; sourceTree = "<group>"; };
 		CB3A400DC692F4EF37497AE5 /* Pods_funnyface2222.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_funnyface2222.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6111EC92B68E58500BD49AA /* newtemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newtemplate.swift; sourceTree = "<group>"; };
 		E6111ECA2B68E58500BD49AA /* newtemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newtemplate.xib; sourceTree = "<group>"; };
@@ -421,6 +435,35 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B710440A2C53B5340093FDFE /* Custom Font */ = {
+			isa = PBXGroup;
+			children = (
+				B75C30672C53D19C00B60DB2 /* StarBorn */,
+				B75C306A2C53D20100B60DB2 /* QuickSand */,
+			);
+			path = "Custom Font";
+			sourceTree = "<group>";
+		};
+		B75C30672C53D19C00B60DB2 /* StarBorn */ = {
+			isa = PBXGroup;
+			children = (
+				B75C30662C53D19C00B60DB2 /* Starborn.ttf */,
+			);
+			path = StarBorn;
+			sourceTree = "<group>";
+		};
+		B75C306A2C53D20100B60DB2 /* QuickSand */ = {
+			isa = PBXGroup;
+			children = (
+				B71044052C53B5340093FDFE /* Quicksand-Bold.ttf */,
+				B71044062C53B5340093FDFE /* Quicksand-Light.ttf */,
+				B71044072C53B5340093FDFE /* Quicksand-Medium.ttf */,
+				B71044082C53B5340093FDFE /* Quicksand-Regular.ttf */,
+				B71044092C53B5340093FDFE /* Quicksand-SemiBold.ttf */,
+			);
+			path = QuickSand;
+			sourceTree = "<group>";
+		};
 		DFBD2FB375712023C3976169 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +561,7 @@
 		E66C92CA2B4E52EC00B74491 = {
 			isa = PBXGroup;
 			children = (
+				B710440A2C53B5340093FDFE /* Custom Font */,
 				E64EC8C72B84719800E8AD4D /* testttt */,
 				E66C92EA2B4E551F00B74491 /* R.generated.swift */,
 				E64E47C32B5E5768007DDAD0 /* download.png */,
@@ -642,6 +686,7 @@
 				E66C93322B4E557A00B74491 /* String+Extension.swift */,
 				E66C93332B4E557A00B74491 /* NSMutableAttributedString.swift */,
 				E66C93342B4E557A00B74491 /* UITableView+Extension.swift */,
+				B71044102C53BB360093FDFE /* Fonts.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1247,9 +1292,11 @@
 				E66C93002B4E554000B74491 /* Template3TBVCell.xib in Resources */,
 				E6C6E9BB2B57D2100055D260 /* SwapImageAlbum.xib in Resources */,
 				E6C6E99B2B565B7A0055D260 /* cacluachonimageclv.xib in Resources */,
+				B710440D2C53B5340093FDFE /* Quicksand-Medium.ttf in Resources */,
 				E69E059C2B52EF8100E9D2DB /* SwapVideoDetailVC.xib in Resources */,
 				E66C93D92B4E559600B74491 /* tieudeclv.xib in Resources */,
 				E66C93CA2B4E559600B74491 /* SlideMenuViewController.xib in Resources */,
+				B710440E2C53B5340093FDFE /* Quicksand-Regular.ttf in Resources */,
 				E66C93DF2B4E559600B74491 /* DetailCommentTableViewCell.xib in Resources */,
 				E66C92E32B4E52EF00B74491 /* LaunchScreen.storyboard in Resources */,
 				E6EB4E212B970527002E87A7 /* ChangePassController.xib in Resources */,
@@ -1257,6 +1304,7 @@
 				E66C93F22B4E559600B74491 /* ChangerAvatarViewController.xib in Resources */,
 				E68D67272B5F9FCE00E410FC /* hightlightmain.xib in Resources */,
 				E676F5D92B60FDA300C96049 /* celleventduoi.xib in Resources */,
+				B75C30692C53D19C00B60DB2 /* Starborn.ttf in Resources */,
 				E66C94022B4E559600B74491 /* DetailHowToVC.xib in Resources */,
 				E66C92E02B4E52EF00B74491 /* Assets.xcassets in Resources */,
 				E64E47932B5AEA64007DDAD0 /* detailNewvideoSwap.xib in Resources */,
@@ -1286,6 +1334,7 @@
 				E6C6E99F2B565B920055D260 /* thanhvienimagecon.xib in Resources */,
 				E66C92FA2B4E554000B74491 /* Template2TBVCell.xib in Resources */,
 				E66C93C62B4E559600B74491 /* SlideMenuTableViewCell.xib in Resources */,
+				B710440F2C53B5340093FDFE /* Quicksand-SemiBold.ttf in Resources */,
 				E66C93ED2B4E559600B74491 /* CommentsViewController.xib in Resources */,
 				E66C94052B4E559600B74491 /* HeaderView.xib in Resources */,
 				E66C93D82B4E559600B74491 /* cacluachonclv.xib in Resources */,
@@ -1297,6 +1346,7 @@
 				E68D67392B5FCC0A00E410FC /* phanduoicell.xib in Resources */,
 				E66C93E72B4E559600B74491 /* LoveViewController.xib in Resources */,
 				E67BE0302B8599DC00FF559C /* babycenter.xib in Resources */,
+				B710440C2C53B5340093FDFE /* Quicksand-Light.ttf in Resources */,
 				E66C93F42B4E559600B74491 /* ProfileViewController.xib in Resources */,
 				E66C93F52B4E559600B74491 /* RecentCommentTableViewCell.xib in Resources */,
 				E66C93CB2B4E559600B74491 /* mhchinh.storyboard in Resources */,
@@ -1306,6 +1356,7 @@
 				E66C94042B4E559600B74491 /* EventViewController.xib in Resources */,
 				E66C92FC2B4E554000B74491 /* PageHomeCLVCell.xib in Resources */,
 				E66C93F72B4E559600B74491 /* UserEventViewController.xib in Resources */,
+				B710440B2C53B5340093FDFE /* Quicksand-Bold.ttf in Resources */,
 				E66C93E12B4E559600B74491 /* DetailEventsViewController.xib in Resources */,
 				E66C93E42B4E559600B74491 /* ListImageOldVC.xib in Resources */,
 			);
@@ -1430,6 +1481,7 @@
 				E64614592B6257AD000681D3 /* DetailEventViewController.swift in Sources */,
 				E68D671F2B5E781400E410FC /* testmain.swift in Sources */,
 				E66C93E82B4E559600B74491 /* ReportCommentVC.swift in Sources */,
+				B71044112C53BB360093FDFE /* Fonts.swift in Sources */,
 				E66C940B2B4E559600B74491 /* ControlPanel.swift in Sources */,
 				E66C934F2B4E558700B74491 /* ServiceConstant.swift in Sources */,
 				E67DF4632B551FD80074D573 /* StoryboardPageTabMenuViewController.swift in Sources */,

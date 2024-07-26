@@ -11,6 +11,8 @@ import Kingfisher
 class cacluachonclv: UICollectionViewCell {
     @IBOutlet weak var viewchinh:UIView!
     @IBOutlet weak var thanhphanclvcell:UICollectionView!
+    @IBOutlet weak var showMoreBtn: UIButton!
+    
     var parent: UIViewController?
     @IBOutlet weak var labelNameCategori:UILabel!
     var listTemplateVideo : [Temple2VideoModel] = [Temple2VideoModel]()
@@ -19,6 +21,13 @@ class cacluachonclv: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupUI()
+    }
+    
+    private func setupUI() {
+        labelNameCategori.font = .quickSandBold(size: 20)
+        showMoreBtn.titleLabel?.font = .quickSandSemiBold(size: 14)
+        
     }
 }
 

@@ -10,6 +10,8 @@ import Kingfisher
 
 class phanduoicell: UICollectionViewCell {
     @IBOutlet weak var cacluachon2:UICollectionView!
+    @IBOutlet weak var recentEventLabel:UILabel!
+
     
     var dataList_All: [Sukien] = []
     var listSukien : [List_sukien] = [List_sukien]()
@@ -19,10 +21,12 @@ class phanduoicell: UICollectionViewCell {
 
         self.cacluachon2.reloadData()
         cacluachon2.register(UINib(nibName: "celleventduoi", bundle: nil), forCellWithReuseIdentifier: "celleventduoi")
-        
-        // Do any additional setup after loading the view.
+        setupUI()
     }
 
+    private func setupUI() {
+        recentEventLabel.font = .quickSandBold(size: 20)
+    }
 
     /*
     // MARK: - Navigation
@@ -42,7 +46,7 @@ extension phanduoicell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("count::::::")
+        
         print(self.dataList_All.count)
         if self.dataList_All.count <= 3{
             return self.dataList_All.count
