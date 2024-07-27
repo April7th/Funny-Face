@@ -9,6 +9,8 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        
     }
     func showAlert(message: String) {
         let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)

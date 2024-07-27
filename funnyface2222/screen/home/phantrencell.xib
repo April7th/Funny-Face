@@ -34,7 +34,7 @@
                                 <rect key="frame" x="8" y="45.333333333333329" width="238.66666666666666" height="57.333333333333329"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugL-Pn-XAz">
-                                <rect key="frame" x="10" y="112.66666666666666" width="269.66666666666669" height="35"/>
+                                <rect key="frame" x="10" y="112.66666666666666" width="259.66666666666669" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="ypb-Ct-JZx"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="ar7-zO-Hzs" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" id="3vB-tA-SOg"/>
                             <constraint firstItem="ar7-zO-Hzs" firstAttribute="top" secondItem="gGj-hJ-4Nz" secondAttribute="top" id="4dE-rZ-L06"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="leading" secondItem="gGj-hJ-4Nz" secondAttribute="leading" constant="8" id="8UH-R7-M7p"/>
-                            <constraint firstItem="XdJ-8a-ft0" firstAttribute="leading" secondItem="ugL-Pn-XAz" secondAttribute="trailing" constant="20" id="BeF-EG-vgN"/>
+                            <constraint firstItem="XdJ-8a-ft0" firstAttribute="leading" secondItem="ugL-Pn-XAz" secondAttribute="trailing" constant="30" id="BeF-EG-vgN"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="height" secondItem="ar7-zO-Hzs" secondAttribute="height" multiplier="0.36" id="BrA-6v-WNH"/>
                             <constraint firstAttribute="trailing" secondItem="XdJ-8a-ft0" secondAttribute="trailing" constant="8" id="DLx-gP-Jey"/>
                             <constraint firstItem="4k5-8E-qOH" firstAttribute="top" secondItem="Jt0-kY-i5U" secondAttribute="bottom" constant="8" id="Dhs-JH-ySz"/>

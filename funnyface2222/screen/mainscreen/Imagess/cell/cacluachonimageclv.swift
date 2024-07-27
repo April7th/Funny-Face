@@ -25,15 +25,22 @@ class cacluachonimageclv: UICollectionViewCell {
     var parent: UIViewController?
     @IBOutlet weak var labelNameCategori:UILabel!
     //var listTemplateVideo : [Temple2VideoModel] = [Temple2VideoModel]()
+    @IBOutlet weak var showMore:UIButton!
+
    
     var stt=0
     override func awakeFromNib() {
         super.awakeFromNib()
      
         //print(self.labelso.text)
+        setupUI()
         
     }
   
+    private func setupUI() {
+        labelNameCategori.font = .quickSandBold(size: 20)
+        showMore.titleLabel?.font = .quickSandRegular(size: 14)
+    }
     
 }
 extension cacluachonimageclv: UICollectionViewDelegate, UICollectionViewDataSource {

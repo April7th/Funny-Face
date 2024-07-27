@@ -33,6 +33,19 @@ class loginView: BaseViewController {
     @IBOutlet weak var oldLoginLabel: UILabel!
     @IBOutlet weak var view11: UIView!
     @IBOutlet weak var view22: UIView!
+    
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var signUpWithEmailLabel: UILabel!
+    @IBOutlet weak var rememberLabel: UILabel!
+    @IBOutlet weak var forgotPassButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var dontHaveAccountLabel: UILabel!
+    @IBOutlet weak var checkboxButton: UIButton!
+
+
+
+    
+    
     func setDataPro(){
         if let number_user: Int = KeychainWrapper.standard.integer(forKey: "saved_login_account"){
             for item in 0..<number_user{
@@ -96,6 +109,24 @@ class loginView: BaseViewController {
         //showPasswordButton.setTitle("", for: .normal)
        // fbbtn.setTitle("", for: .normal)
        // ggbtn.setTitle("", for: .normal)
+        
+        setupUILogin()
+    }
+
+    private func setupUILogin() {
+        loginLabel.font = .quickSandBold(size: 20)
+        signUpWithEmailLabel.font = .quickSandSemiBold(size: 14)
+        rememberLabel.font = .quickSandMedium(size: 14)
+        if let customFont = UIFont.quickSandSemiBold(size: 14) {
+            forgotPassButton.titleLabel?.font = customFont
+        }
+        if let customFont = UIFont.quickSandSemiBold(size: 14) {
+            signUpButton.titleLabel?.font = customFont
+        }
+        dontHaveAccountLabel.font = .quickSandSemiBold(size: 14)
+        
+        checkboxButton.setTitle("", for: .normal)
+        checkboxButton.imageView?.contentMode = .scaleAspectFit
     }
     
     func callApiIP(){
@@ -106,6 +137,14 @@ class loginView: BaseViewController {
             case .failure(let failure):
                 print(failure)
             }
+        }
+    }
+    
+    @IBAction func checkBoxTapped(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
         }
     }
     

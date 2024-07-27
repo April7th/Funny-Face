@@ -30,6 +30,8 @@ class StoryboardPageTabMenuViewController: PageMenuController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         self.edgesForExtendedLayout = []
 
         if options.layout == .layoutGuide && options.tabMenuPosition == .bottom {

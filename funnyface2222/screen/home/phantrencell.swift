@@ -72,12 +72,14 @@ class phantrencell: UICollectionViewCell {
         
         cacluachon2.register(UINib(nibName: "hightlightmain", bundle: nil), forCellWithReuseIdentifier: "hightlightmain")
         // Do any additional setup after loading the view.
-        createNewProject.layer.cornerRadius = 10
+        createNewProject.layer.cornerRadius = 11
         createNewProject.clipsToBounds = true
     }
     
     private func setupUI() {
-        createNewProject.titleLabel?.font = .quickSandBold(size: 12)
+        if let customFont = UIFont.quickSandBold(size: 14) {
+            createNewProject.setCustomFont(customFont, for: [.normal, .highlighted, .selected, .disabled])
+        }
         
         highlightLabel.font = .quickSandBold(size: 20)
         showMoreLabel.titleLabel?.font = .quickSandBold(size: 14)

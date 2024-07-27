@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +13,7 @@
             <connections>
                 <outlet property="addImage" destination="aOJ-HN-H1h" id="trO-2H-jQT"/>
                 <outlet property="addImageBoy" destination="c22-Lj-EvV" id="FPi-Pe-MgV"/>
+                <outlet property="babyBackground" destination="3Xk-yw-gBh" id="lH5-sb-QGa"/>
                 <outlet property="boyImage" destination="c22-Lj-EvV" id="6Ro-5X-I9F"/>
                 <outlet property="boyNameTextField" destination="2ql-iH-5u0" id="yqg-VW-N4t"/>
                 <outlet property="boyView" destination="c22-Lj-EvV" id="3Wu-1F-mDY"/>
@@ -22,6 +22,7 @@
                 <outlet property="girlImage" destination="aOJ-HN-H1h" id="q8r-dO-XwM"/>
                 <outlet property="girlNameTextField" destination="I4j-S9-TP5" id="nBg-PD-yBi"/>
                 <outlet property="girlView" destination="aOJ-HN-H1h" id="i2h-Ac-ENv"/>
+                <outlet property="guessBabyLabel" destination="Cot-jq-SL1" id="OO5-Ll-gUs"/>
                 <outlet property="imageBaby" destination="bVu-wA-L3K" id="dNs-Fu-Se7"/>
                 <outlet property="view" destination="6Ey-er-0JG" id="Jwb-Wl-ExN"/>
             </connections>
@@ -31,14 +32,17 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="babyGenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3Xk-yw-gBh">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess your baby’s face" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cot-jq-SL1">
-                    <rect key="frame" x="77" y="145" width="239" height="21"/>
+                    <rect key="frame" x="77" y="145" width="239" height="29.666666666666657"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqV-j1-4cN">
-                    <rect key="frame" x="16" y="198" width="361" height="474"/>
+                    <rect key="frame" x="16" y="206.66666666666663" width="361" height="474"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luF-Up-jD3">
                             <rect key="frame" x="8" y="0.0" width="116" height="106"/>
@@ -83,14 +87,14 @@
                             </constraints>
                         </view>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="his name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ql-iH-5u0">
-                            <rect key="frame" x="8" y="111" width="116" height="34"/>
+                            <rect key="frame" x="8" y="111.00000000000003" width="116" height="34"/>
                             <color key="backgroundColor" name="AccentColor"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="her name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4j-S9-TP5">
-                            <rect key="frame" x="237" y="111" width="116" height="34"/>
+                            <rect key="frame" x="237" y="111.00000000000003" width="116" height="34"/>
                             <color key="backgroundColor" name="AccentColor"/>
                             <color key="tintColor" name="AccentColor"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,7 +102,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6I-g9-gs7">
-                            <rect key="frame" x="58" y="145" width="245" height="193"/>
+                            <rect key="frame" x="58" y="145.00000000000003" width="245" height="192.99999999999997"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 48097823" translatesAutoresizingMaskIntoConstraints="NO" id="Uco-3c-guH">
                                     <rect key="frame" x="0.0" y="0.0" width="245" height="193"/>
@@ -115,7 +119,7 @@
                             <rect key="frame" x="108" y="338" width="140" height="93"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6b-xa-7lg">
-                            <rect key="frame" x="143" y="50" width="75" height="72"/>
+                            <rect key="frame" x="143" y="50.000000000000028" width="75" height="72"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="Frame 48097840"/>
                             <connections>
@@ -154,8 +158,8 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIb-gd-yU3">
-                    <rect key="frame" x="124.00000000000001" y="698" width="157.33333333333337" height="35"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <rect key="frame" x="124.00000000000001" y="706.66666666666663" width="157.33333333333337" height="42.666666666666629"/>
+                    <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="xem va dowload">
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,18 +169,22 @@
             <viewLayoutGuide key="safeArea" id="9v0-5u-s64"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="3Xk-yw-gBh" firstAttribute="top" secondItem="6Ey-er-0JG" secondAttribute="top" id="A3a-pL-jT5"/>
                 <constraint firstItem="WIb-gd-yU3" firstAttribute="width" secondItem="6Ey-er-0JG" secondAttribute="width" multiplier="0.4" id="Bp2-EN-WLE"/>
                 <constraint firstItem="WIb-gd-yU3" firstAttribute="leading" secondItem="bVu-wA-L3K" secondAttribute="leading" id="CSK-g8-1zi"/>
                 <constraint firstItem="Cot-jq-SL1" firstAttribute="top" secondItem="9v0-5u-s64" secondAttribute="top" constant="86" id="Cm8-oz-qZ6"/>
                 <constraint firstItem="WIb-gd-yU3" firstAttribute="top" secondItem="XqV-j1-4cN" secondAttribute="bottom" constant="26" id="EOb-H5-Qw0"/>
                 <constraint firstItem="XqV-j1-4cN" firstAttribute="height" secondItem="6Ey-er-0JG" secondAttribute="height" multiplier="0.556338" id="K1e-T7-Xuf"/>
+                <constraint firstAttribute="bottom" secondItem="3Xk-yw-gBh" secondAttribute="bottom" id="Lhe-c5-Yy8"/>
                 <constraint firstItem="9v0-5u-s64" firstAttribute="trailing" secondItem="Cot-jq-SL1" secondAttribute="trailing" constant="77" id="MUx-si-dJu"/>
                 <constraint firstItem="XqV-j1-4cN" firstAttribute="leading" secondItem="9v0-5u-s64" secondAttribute="leading" constant="16" id="TTE-vA-xCJ"/>
-                <constraint firstItem="WIb-gd-yU3" firstAttribute="height" secondItem="6Ey-er-0JG" secondAttribute="height" multiplier="0.0410798" id="b3b-Ki-74e"/>
+                <constraint firstItem="WIb-gd-yU3" firstAttribute="height" secondItem="6Ey-er-0JG" secondAttribute="height" multiplier="0.05" id="b3b-Ki-74e"/>
                 <constraint firstItem="Cot-jq-SL1" firstAttribute="leading" secondItem="9v0-5u-s64" secondAttribute="leading" constant="77" id="iOs-vm-QNM"/>
                 <constraint firstItem="XqV-j1-4cN" firstAttribute="top" secondItem="Cot-jq-SL1" secondAttribute="bottom" constant="32" id="mP2-zP-abi"/>
                 <constraint firstItem="9v0-5u-s64" firstAttribute="trailing" secondItem="XqV-j1-4cN" secondAttribute="trailing" constant="16" id="uTf-gp-wwv"/>
-                <constraint firstItem="Cot-jq-SL1" firstAttribute="height" secondItem="6Ey-er-0JG" secondAttribute="height" multiplier="0.0246479" id="z9C-I9-htT"/>
+                <constraint firstItem="3Xk-yw-gBh" firstAttribute="leading" secondItem="9v0-5u-s64" secondAttribute="leading" id="vob-kr-ahk"/>
+                <constraint firstItem="9v0-5u-s64" firstAttribute="trailing" secondItem="3Xk-yw-gBh" secondAttribute="trailing" id="xAo-QV-N5a"/>
+                <constraint firstItem="Cot-jq-SL1" firstAttribute="height" secondItem="6Ey-er-0JG" secondAttribute="height" multiplier="0.035" id="z9C-I9-htT"/>
             </constraints>
             <point key="canvasLocation" x="-797.70992366412213" y="-22.535211267605636"/>
         </view>
@@ -187,11 +195,9 @@
         <image name="Frame 48097544" width="84" height="84"/>
         <image name="Frame 48097823" width="255" height="156"/>
         <image name="Frame 48097840" width="67" height="58"/>
+        <image name="babyGenBackground" width="1365.3333740234375" height="910"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

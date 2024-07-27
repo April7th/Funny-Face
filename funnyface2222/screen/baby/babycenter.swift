@@ -47,6 +47,11 @@ class babycenter: BaseViewController {
     @IBOutlet weak var boyView: UIView!
     @IBOutlet weak var girlView: UIView!
     @IBOutlet weak var imageBaby: UIImageView!
+    
+    @IBOutlet weak var babyBackground: UIImageView!
+    @IBOutlet weak var guessBabyLabel: UILabel!
+
+
     func animateButton() {
         buttonLove.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         UIView.animate(withDuration: 1,
@@ -237,6 +242,14 @@ class babycenter: BaseViewController {
         }
     }
     override func viewDidLoad() {
+        
+        babyBackground.alpha = 0.5
+        guessBabyLabel.font = .quickSandSemiBold(size: 20)
+        buttonKQ.setTitle("Download Image", for: .normal)
+        buttonKQ.layer.cornerRadius = 10
+        buttonKQ.layer.masksToBounds = true
+        
+        
         super.viewDidLoad()
         rateApp()
         NotificationCenter.default.addObserver(self, selector: #selector(Send_OLD_Images_Click), name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil)

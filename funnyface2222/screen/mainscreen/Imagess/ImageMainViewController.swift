@@ -9,6 +9,10 @@ import UIKit
 
 class ImageMainViewController: UIViewController {
     @IBOutlet weak var cacluachonimageclv:UICollectionView!
+    
+    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var createYourOwnImagesLabel: UILabel!
+    
     @IBAction func swapnext(){
         if let parentVC = findParentViewController(of: UIViewController.self) {
                 let nextViewController = SwapImageAlbum(nibName: "SwapImageAlbum", bundle: nil)
@@ -19,12 +23,18 @@ class ImageMainViewController: UIViewController {
     }
     var listData:[ListVideoModal] = [ListVideoModal]()
     override func viewDidLoad() {
+        
+        setupUI()
         super.viewDidLoad()
         cacluachonimageclv.register(UINib(nibName: "cacluachonimageclv", bundle: nil), forCellWithReuseIdentifier: "cacluachonimageclv")
         // Do any additional setup after loading the view.
     }
     
-
+    private func setupUI() {
+        createButton.setTitle("", for: .normal)
+        createYourOwnImagesLabel.font = .quickSandBold(size: 20)
+    }
+    
     /*
     // MARK: - Navigation
 

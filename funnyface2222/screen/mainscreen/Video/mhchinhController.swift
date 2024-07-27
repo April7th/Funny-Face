@@ -12,6 +12,8 @@ class mhchinhController: UIViewController,SETabItemProvider {
     var seTabBarItem: UITabBarItem? {
         return UITabBarItem(title: "", image: R.image.tab_video(), tag: 0)
     }
+    
+    
     @IBOutlet weak var buttonnewproject:UIButton!
     
     @IBOutlet weak var theloaiclv:UICollectionView!
