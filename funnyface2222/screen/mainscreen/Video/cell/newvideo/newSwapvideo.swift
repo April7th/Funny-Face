@@ -13,10 +13,17 @@ import Vision
 import PhotosUI
 import AVKit
 class newSwapvideo: UIViewController {
+    
+    @IBOutlet weak var addVideoButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+
+    
     var itemLink:Temple2VideoModel = Temple2VideoModel()
     @IBAction func addVideo(_ sender: Any) {
            addFunc()
        }
+    
+    
     func addFunc() {
             var configuration: PHPickerConfiguration = PHPickerConfiguration()
             configuration.filter = .any(of: [ .videos])
@@ -128,6 +135,15 @@ class newSwapvideo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        addVideoButton.setTitle("   Add new video", for: .normal)
+        addVideoButton.titleLabel?.font = .quickSandBold(size: 14)
+        addVideoButton.layer.cornerRadius = 10
+        addVideoButton.layer.masksToBounds = true
+        
+        nextButton.titleLabel?.font = .quickSandBold(size: 14)
+        nextButton.layer.cornerRadius = 10
+        nextButton.layer.masksToBounds = true
+        
 
         self.buttonBack.setTitle("", for: UIControl.State.normal)
        

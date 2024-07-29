@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4R-MY-m54">
-                                <rect key="frame" x="0.0" y="59" width="393" height="224"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="273.33333333333331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your own images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mey-1w-h4S">
                                         <rect key="frame" x="8" y="7.9999999999999982" width="385" height="20.333333333333329"/>
@@ -28,8 +28,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-EA-ZlQ">
-                                        <rect key="frame" x="8" y="53.333333333333329" width="377" height="162.66666666666669"/>
+                                        <rect key="frame" x="8" y="53.333333333333314" width="377" height="220"/>
                                         <color key="backgroundColor" red="0.1764705882" green="0.34901960780000002" blue="0.23137254900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="P09-pf-WAT"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Frame 48097838"/>
                                         <connections>
@@ -43,13 +46,12 @@
                                     <constraint firstItem="mey-1w-h4S" firstAttribute="leading" secondItem="y4R-MY-m54" secondAttribute="leading" constant="8" id="Ald-K0-98A"/>
                                     <constraint firstAttribute="trailing" secondItem="mey-1w-h4S" secondAttribute="trailing" id="BQ4-NA-baY"/>
                                     <constraint firstItem="mey-1w-h4S" firstAttribute="top" secondItem="y4R-MY-m54" secondAttribute="top" constant="8" id="IJw-G9-D9Y"/>
-                                    <constraint firstAttribute="bottom" secondItem="DQA-EA-ZlQ" secondAttribute="bottom" constant="8" id="RIj-5c-0vO"/>
                                     <constraint firstItem="DQA-EA-ZlQ" firstAttribute="top" secondItem="mey-1w-h4S" secondAttribute="bottom" constant="25" id="RVZ-0y-XCh"/>
-                                    <constraint firstItem="mey-1w-h4S" firstAttribute="height" secondItem="y4R-MY-m54" secondAttribute="height" multiplier="0.0907692" id="wqH-27-l47"/>
+                                    <constraint firstAttribute="bottom" secondItem="DQA-EA-ZlQ" secondAttribute="bottom" id="kj2-if-DLU"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Zk-uP-VA0">
-                                <rect key="frame" x="0.0" y="295" width="393" height="503"/>
+                                <rect key="frame" x="0.0" y="352.33333333333326" width="393" height="445.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aaG-54-MCq">
                                     <size key="itemSize" width="128" height="128"/>

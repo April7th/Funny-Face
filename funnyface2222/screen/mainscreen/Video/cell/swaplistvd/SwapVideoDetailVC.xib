@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SwapVideoDetailVC" customModule="funnyface2222" customModuleProvider="target">
             <connections>
                 <outlet property="buttonBack" destination="nep-xy-9a6" id="eTh-Xq-DcH"/>
+                <outlet property="continueLabel" destination="TZ8-QK-hno" id="SJc-NB-Ozn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,10 +34,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZ8-QK-hno">
-                    <rect key="frame" x="148.66666666666666" y="750" width="95.666666666666657" height="35"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <rect key="frame" x="39.333333333333343" y="750" width="314.33333333333326" height="35"/>
+                    <color key="backgroundColor" red="0.11372549019607843" green="0.72549019607843135" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="continute">
+                    <buttonConfiguration key="configuration" style="plain" image="video.fill" catalog="system">
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </buttonConfiguration>
                     <connections>
@@ -50,6 +51,7 @@
                 <constraint firstItem="TZ8-QK-hno" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4ri-72-dFr"/>
                 <constraint firstItem="nep-xy-9a6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="8OP-2a-Gfz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TZ8-QK-hno" secondAttribute="bottom" constant="33" id="mGD-mK-4KB"/>
+                <constraint firstItem="TZ8-QK-hno" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.8" id="omd-qU-52E"/>
                 <constraint firstItem="nep-xy-9a6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vKW-nx-eOW"/>
             </constraints>
             <point key="canvasLocation" x="58.778625954198468" y="-33.098591549295776"/>
@@ -57,11 +59,9 @@
     </objects>
     <resources>
         <image name="arrow-left" width="24" height="24.333333969116211"/>
+        <image name="video.fill" catalog="system" width="128" height="81"/>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

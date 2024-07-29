@@ -14,6 +14,8 @@ import Vision
 class SwapVideoDetailVC: UIViewController {
     var itemLink:Temple2VideoModel = Temple2VideoModel()
     @IBOutlet weak var buttonBack: UIButton!
+    @IBOutlet weak var continueLabel: UIButton!
+
     var IsStopBoyAnimation = true
   //  @IBOutlet weak var boyImage: UIImageView!
     var image_Data_Nam:UIImage = UIImage()
@@ -250,6 +252,12 @@ class SwapVideoDetailVC: UIViewController {
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        continueLabel.setTitle("    Use this video", for: .normal)
+        continueLabel.titleLabel?.font = .quickSandBold(size: 14)
+        continueLabel.layer.cornerRadius = 10
+        continueLabel.layer.masksToBounds = true
+        
 //        NotificationCenter.default.addObserver(self, selector: #selector(Send_OLD_Images_Click), name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil)
 
         self.buttonBack.setTitle("", for: UIControl.State.normal)
