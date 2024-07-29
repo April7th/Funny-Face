@@ -59,6 +59,8 @@ class LoveViewController: BaseViewController, SETabItemProvider {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //backgroundView.gradient()
@@ -200,20 +202,22 @@ class LoveViewController: BaseViewController, SETabItemProvider {
         let device = Device.current
         let modelName = device.description
         AppConstant.modelName = modelName
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        UIView.animate(withDuration: 2.0, animations: {
-            self.luonSongImage.transform = CGAffineTransform(translationX: -150 , y: 0)
-        }) { _ in
-            self.luonSongImage.transform = CGAffineTransform(translationX: 0 , y: 0)
-        }
-        UIView.animate(withDuration: 3.0, animations: {
-            self.luonSong2Image.transform = CGAffineTransform(translationX: -160 , y: 0)
-        }) { _ in
-            self.luonSong2Image.transform = CGAffineTransform(translationX: 0 , y: 0)
-        }
+//        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+//        UIView.animate(withDuration: 2.0, animations: {
+//            self.luonSongImage.transform = CGAffineTransform(translationX: -150 , y: 0)
+//        }) { _ in
+//            self.luonSongImage.transform = CGAffineTransform(translationX: 0 , y: 0)
+//        }
+//        UIView.animate(withDuration: 3.0, animations: {
+//            self.luonSong2Image.transform = CGAffineTransform(translationX: -160 , y: 0)
+//        }) { _ in
+//            self.luonSong2Image.transform = CGAffineTransform(translationX: 0 , y: 0)
+//        }
         textViewMain.backgroundColor = UIColor.clear
         textViewMain.isEditable = false
         circularSlider.endPointValue = 0
+        
+        
     }
     
     @objc func timerAction() {
