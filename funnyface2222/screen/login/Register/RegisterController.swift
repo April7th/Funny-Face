@@ -47,6 +47,15 @@ class RegisterController: UIViewController {
     @IBOutlet weak var errorConfirmPass: UIView!
     @IBOutlet weak var fbbtn: UIButton!
     @IBOutlet weak var ggbtn: UIButton!
+    
+    @IBOutlet weak var signUpLabel: UILabel!
+    @IBOutlet weak var signUpWithEmailLabel: UILabel!
+    @IBOutlet weak var dontHaveAccountLabel: UILabel!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+
+
+    
     var isError = 0
     
     func animateButton() {
@@ -74,14 +83,35 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        
+        setupUIRegister()
+        
+        //fbbtn.setTitle("", for: .normal)
+        //ggbtn.setTitle("", for: .normal)
+//        try? VideoBackground.shared.play(view: imageBackground, videoName: "changeface", videoType: "mp4")
+    }
+    
+    private func setupUIRegister() {
         view11.layer.borderWidth = 1
         view11.layer.borderColor = UIColor.gray.cgColor
+        view11.layer.cornerRadius = 10 // Thiết lập bán kính bo tròn
+        view11.layer.masksToBounds = true
+        
         view22.layer.borderWidth = 1
         view22.layer.borderColor = UIColor.gray.cgColor
+        view22.layer.cornerRadius = 10 // Thiết lập bán kính bo tròn
+        view22.layer.masksToBounds = true
+        
         view33.layer.borderWidth = 1
         view33.layer.borderColor = UIColor.gray.cgColor
+        view33.layer.cornerRadius = 10 // Thiết lập bán kính bo tròn
+        view33.layer.masksToBounds = true
+        
         view44.layer.borderWidth = 1
         view44.layer.borderColor = UIColor.gray.cgColor
+        view44.layer.cornerRadius = 10 // Thiết lập bán kính bo tròn
+        view44.layer.masksToBounds = true
+        
         userNameTextField.attributedPlaceholder = NSAttributedString(
             string: "user name",
             attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -106,10 +136,23 @@ class RegisterController: UIViewController {
         avatarImage.setTitle("", for: .normal)
         AgainSHowPass.setTitle("", for: .normal)
         showPassButton.setTitle("", for: .normal)
-        //fbbtn.setTitle("", for: .normal)
-        //ggbtn.setTitle("", for: .normal)
-//        try? VideoBackground.shared.play(view: imageBackground, videoName: "changeface", videoType: "mp4")
+        
+        signUpLabel.font = .quickSandBold(size: 20)
+        signUpWithEmailLabel.font = .quickSandSemiBold(size: 14)
+        dontHaveAccountLabel.font = .quickSandSemiBold(size: 14)
+        loginButton.titleLabel?.font = .quickSandSemiBold(size: 14)
+        
+        if let customFont = UIFont.quickSandBold(size: 14) {
+            signUpButton.titleLabel?.font = customFont
+        }
+        
+        
+        signUpButton.layer.cornerRadius = 10 // Thiết lập bán kính bo tròn
+        signUpButton.layer.masksToBounds = true
+        
+        
     }
+    
     @IBAction func loginnn(){
        
         let storyboard = UIStoryboard(name: "login", bundle: nil) // type storyboard name instead of Main

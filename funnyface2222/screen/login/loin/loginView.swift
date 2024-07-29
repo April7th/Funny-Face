@@ -43,6 +43,7 @@ class loginView: BaseViewController {
     @IBOutlet weak var checkboxButton: UIButton!
 
 
+    var rememberCheck: Bool = false
 
     
     
@@ -82,24 +83,6 @@ class loginView: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view11.layer.borderWidth = 1
-        view11.layer.borderColor = UIColor.gray.cgColor
-        view22.layer.borderWidth = 1
-        view22.layer.borderColor = UIColor.gray.cgColor
-        showPassButton.setTitle("", for: .normal)
-        self.navigationController?.isNavigationBarHidden = true
-        userNameTextField.attributedPlaceholder = NSAttributedString(
-            string: "user name",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-        )
-        passWordTextField.attributedPlaceholder = NSAttributedString(
-            string: "password",
-            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
-        )
-        hideKeyboardWhenTappedAround()
-//        try? VideoBackground.shared.play(view: imageBackground, videoName: "swap-face", videoType: "mp4")
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabelLisAccountLogin(tap:)))
       //  oldLoginLabel.addGestureRecognizer(tap)
       //  oldLoginLabel.isUserInteractionEnabled = true
         
@@ -127,6 +110,42 @@ class loginView: BaseViewController {
         
         checkboxButton.setTitle("", for: .normal)
         checkboxButton.imageView?.contentMode = .scaleAspectFit
+        
+        forgotPassButton.titleLabel?.font = .quickSandSemiBold(size: 14)
+        rememberLabel.font = .quickSandMedium(size: 14)
+        loginButton.titleLabel?.font = .quickSandBold(size: 14)
+        
+        loginButton.layer.cornerRadius = 10
+        loginButton.layer.masksToBounds = true
+        
+        view11.layer.borderWidth = 1
+        view11.layer.borderColor = UIColor.gray.cgColor
+        view11.layer.cornerRadius = 10
+        view11.layer.masksToBounds = true
+        view22.layer.borderWidth = 1
+        view22.layer.borderColor = UIColor.gray.cgColor
+        view22.layer.cornerRadius = 10
+        view22.layer.masksToBounds = true
+        showPassButton.setTitle("", for: .normal)
+        self.navigationController?.isNavigationBarHidden = true
+        userNameTextField.attributedPlaceholder = NSAttributedString(
+            string: "user name",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+        )
+        passWordTextField.attributedPlaceholder = NSAttributedString(
+            string: "password",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white]
+        )
+        hideKeyboardWhenTappedAround()
+//        try? VideoBackground.shared.play(view: imageBackground, videoName: "swap-face", videoType: "mp4")
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapLabelLisAccountLogin(tap:)))
+      //  oldLoginLabel.addGestureRecognizer(tap)
+      //  oldLoginLabel.isUserInteractionEnabled = true
+        
+       // settingAttrLabel()
+        callApiIP()
+        self.errorMessageLabel.text = ""
     }
     
     func callApiIP(){
@@ -143,12 +162,22 @@ class loginView: BaseViewController {
     @IBAction func checkBoxTapped(_ sender: UIButton) {
         if sender.isSelected {
             sender.isSelected = false
+            rememberCheck = false
         } else {
             sender.isSelected = true
+            rememberCheck = true
         }
+        
+        print("Remeber check is: \(rememberCheck)")
+        UserDefaults.standard.set(rememberCheck, forKey: "rememberCheck")
     }
     
+    
+    
     @IBAction func btnLogin(_ sender: Any) {
+        
+        
+        
         guard userNameTextField.text != "" && passWordTextField.text != "" else {
             if userNameTextField.text == "" {
                 self.view.makeToast("UserName or Email cannot be blank", position: .top)
@@ -171,6 +200,9 @@ class loginView: BaseViewController {
 //                self.showAlert(message: (result?.ketqua) ?? "qqqqqPassword Wrong Or Account Not Register Or Account Not Verify Email")
                 return
             }
+            
+            let shoudRemember = UserDefaults.standard.bool(forKey: "rememberCheck")
+            
             if let result = result{
                 AppConstant.saveUser(model: result)
                 if let number_user: Int = KeychainWrapper.standard.integer(forKey: "saved_login_account"){
@@ -198,6 +230,7 @@ class loginView: BaseViewController {
                     }
                 }
             }
+            
             let vc = TabbarViewController()
             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
             self.present(vc, animated: true, completion: nil)
