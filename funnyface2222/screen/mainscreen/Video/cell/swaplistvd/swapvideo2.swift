@@ -30,9 +30,20 @@ class swapvideo2: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var percentLabel: UILabel!
     var selectedImage:UIImage!
+    
+    var imageUrlString: String!
+    
+    
+    
+    
+    
     @IBAction func start(){
         self.detectFaces(in: self.selectedImage)
-//        NotificationCenter.default.addObserver(self, selector: #selector(Send_OLD_Images_Click), name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil)
+        
+        
+        
+        //        NotificationCenter.default.addObserver(self, selector: #selector(handleImageNotification), name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil)
+        
     }
     let dateComponentsFormatter: DateComponentsFormatter = {
         let formatter = DateComponentsFormatter()
@@ -60,20 +71,22 @@ class swapvideo2: UIViewController {
         return view
     }()
     
+    
+    
     @IBAction func BackApp(){
         self.dismiss(animated: true)
     }
     @IBAction func nextdd(){
-                let vc = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
-              
-                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-                self.present(vc, animated: true, completion: nil)
+        let vc = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
+        
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
     }
     @IBAction func Start(){
-                let vc = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
-              
-                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-                self.present(vc, animated: true, completion: nil)
+        let vc = newSwapvideo(nibName: "newSwapvideo", bundle: nil)
+        
+        vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+        self.present(vc, animated: true, completion: nil)
     }
     var timerNow: Timer = Timer()
     func uploadGenVideoByImages(completion: @escaping ApiCompletion){
@@ -82,15 +95,24 @@ class swapvideo2: UIViewController {
         }
     }
     
+    
+    
+    
+    
     func detectFaces(in image: UIImage)  {
+        
+        
+        
         //        if let cgImage = image.cgImage {
-        //            let requestHandler = VNImageRequestHandler(cgImage: cgImage, orientation: .up, options: [:])
+        //            let request   ler = VNImageRequestHandler(cgImage: cgImage, orientation: .up, options: [:])
         //            do {
-                  //      let faceDetectionRequest = VNDetectFaceRectanglesRequest()
+        //      let faceDetectionRequest = VNDetectFaceRectanglesRequest()
         //                try requestHandler.perform([faceDetectionRequest])
         //                if let results = faceDetectionRequest.results {
         //                    if results.count == 1 {
-       
+        
+        
+        
         self.circularSlider.maximumValue = 180.0
         var timeCount = 0.0
         self.timerNow = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (_) in
@@ -100,16 +122,17 @@ class swapvideo2: UIViewController {
             self.updatePlayerUI(withCurrentTime: CGFloat(timeCount))
         }
         
-            APIService.shared.GenVideoSwap(device_them_su_kien: AppConstant.modelName ?? "iphone", id_video: String(self.itemLink.id ?? 0) , ip_them_su_kien: AppConstant.IPAddress.asStringOrEmpty(), id_user: AppConstant.userId.asStringOrEmpty(), link_img: self.linkImageVideoSwap, ten_video: "swapvideo.mp4"){response,error in
-                if let response = response{
-                    print(response)
-                    let vc = DetailSwapVideoVC(nibName: "DetailSwapVideoVC", bundle: nil)
-                    vc.itemDataSend = response
-                    vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-                    self.present(vc, animated: true, completion: nil)
-                }
-               
+        APIService.shared.GenVideoSwap(device_them_su_kien: AppConstant.modelName ?? "iphone", id_video: String(self.itemLink.id ?? 0) , ip_them_su_kien: AppConstant.IPAddress.asStringOrEmpty(), id_user: AppConstant.userId.asStringOrEmpty(), link_img: self.linkImageVideoSwap, ten_video: "swapvideo.mp4"){response,error in
+            if let response = response{
+                print(response)
+                print(self.linkImageVideoSwap)
+                let vc = DetailSwapVideoVC(nibName: "DetailSwapVideoVC", bundle: nil)
+                vc.itemDataSend = response
+                vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+                self.present(vc, animated: true, completion: nil)
             }
+            
+        }
         
         //                    }else{
         //                        let textAlertFace = "Image Have " + String( results.count ) + " Face - You need to choose a photo with only one face"
@@ -127,8 +150,11 @@ class swapvideo2: UIViewController {
         let refreshAlert = UIAlertController(title: "Use Old Images Uploaded", message: "Do You Want Select Old Images For AI Generate Images", preferredStyle: UIAlertController.Style.alert)
         refreshAlert.addAction(UIAlertAction(title: "Load Old Images", style: .default, handler: { (action: UIAlertAction!) in
             let vc = ListImageOldVC(nibName: "ListImageOldVC", bundle: nil)
+            
             vc.type = "video"
             vc.modalPresentationStyle = .fullScreen
+            
+            
             self.present(vc, animated: true)
         }))
         refreshAlert.addAction(UIAlertAction(title: "Upload Image New", style: .cancel, handler: { (action: UIAlertAction!) in
@@ -145,13 +171,13 @@ class swapvideo2: UIViewController {
                 self.IsStopBoyAnimation = true
                 self.showImagePicker(selectedSource: .photoLibrary)
             }
-           
+            
             let cancel = UIAlertAction(title: "Cancel", style: .cancel){ _ in
                 self.dismiss(animated: true)
             }
             ac.addAction(cameraBtn)
             ac.addAction(libaryBtn)
-          
+            
             ac.addAction(cancel)
             
             self.present(ac, animated: true)
@@ -164,11 +190,53 @@ class swapvideo2: UIViewController {
         components.second = Int(currentTime)
         timerLabel.text = dateComponentsFormatter.string(from: components)
     }
-    @objc func Send_OLD_Images_Click(notification: NSNotification) {
-        if let imageLink = notification.userInfo?["image"] as? String {
-            self.linkImageVideoSwap = imageLink
+    
+    //    @objc func Send_OLD_Images_Click(notification: NSNotification) {
+    //        if let imageLink = notification.userInfo?["image"] as? String {
+    //            self.linkImageVideoSwap = imageLink
+    //
+    //            guard let url = URL(string: imageLink) else {
+    //                print("Invalid URL")
+    //                return
+    //            }
+    //
+    ////            let url = URL(string: imageLink)
+    //            let processor = DownsamplingImageProcessor(size: self.boyImage.bounds.size)
+    //            |> RoundCornerImageProcessor(cornerRadius: 20)
+    //            self.boyImage.kf.indicatorType = .activity
+    //            self.boyImage.kf.setImage(
+    //                with: url,
+    //                placeholder: UIImage(named: "placeholderImage"),
+    //                options: [
+    //                    .processor(processor),
+    //                    .scaleFactor(UIScreen.main.scale),
+    //                    .transition(.fade(1)),
+    //                    .cacheOriginalImage
+    //                ])
+    //            {
+    //                result in
+    //                switch result {
+    //                case .success(let value):
+    //                    print("Task done for: \(value.source.url?.absoluteString ?? "")")
+    //
+    //                case .failure(let error):
+    //                    print("Job failed: \(error.localizedDescription)")
+    //                }
+    //            }
+    //
+    //        }
+    //    }
+    
+    @objc func handleImageNotification(_ notification: NSNotification) {
+        if let userInfo = notification.userInfo, let imageLink = userInfo["image"] as? String {
             
-            let url = URL(string: imageLink)
+            print("Received image link: \(imageLink)")
+            
+            guard let url = URL(string: imageLink) else {
+                print("Invalid URL")
+                return
+            }
+            
             let processor = DownsamplingImageProcessor(size: self.boyImage.bounds.size)
             |> RoundCornerImageProcessor(cornerRadius: 20)
             self.boyImage.kf.indicatorType = .activity
@@ -180,23 +248,27 @@ class swapvideo2: UIViewController {
                     .scaleFactor(UIScreen.main.scale),
                     .transition(.fade(1)),
                     .cacheOriginalImage
-                ])
-            {
-                result in
+                ]
+            ) { result in
                 switch result {
                 case .success(let value):
                     print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                    
                 case .failure(let error):
                     print("Job failed: \(error.localizedDescription)")
                 }
             }
-            
         }
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-
+        
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleImageNotification(_:)), name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil)
+        
         self.buttonBack.setTitle("", for: UIControl.State.normal)
         circularSlider.endPointValue = 0
         buttonBack.setTitle("", for: .normal)
@@ -233,7 +305,8 @@ class swapvideo2: UIViewController {
             url: URL(string: itemLink.link_video ?? ""),
             thumbnailUrl: URL(string: itemLink.thumbnail ?? ""),
             autoPlay: autoPlay,
-            autoReplay: autoReplay)
+            autoReplay: autoReplay
+        )
         playerView.playbackDelegate = self
         playerView.set(item: item)
     }
@@ -243,7 +316,7 @@ class swapvideo2: UIViewController {
         controlPanel.fullscreenButton.isSelected = enableFullscreen
         playerView.fullscreen(enabled: enableFullscreen)
     }
-
+    
 }
 extension swapvideo2: TrailerPlayerPlaybackDelegate {
     
@@ -298,8 +371,8 @@ extension swapvideo2: ReplayPanelDelegate {
 }
 
 extension swapvideo2 : UIPickerViewDelegate,
-                               UINavigationControllerDelegate,
-                               UIImagePickerControllerDelegate {
+                       UINavigationControllerDelegate,
+                       UIImagePickerControllerDelegate {
     func showImagePicker(selectedSource: UIImagePickerController.SourceType) {
         guard UIImagePickerController.isSourceTypeAvailable(selectedSource) else {
             return
@@ -317,15 +390,19 @@ extension swapvideo2 : UIPickerViewDelegate,
             picker.dismiss(animated: true)
             self.boyImage.image = UIImage(named: "icon-upload")
             self.image_Data_Nam = selectedImage
+            
             self.uploadGenVideoByImages(){data,error in
                 if let data = data as? String{
                     print(data)
+                    
                     self.linkImageVideoSwap = data
                     let removeSuot = self.linkImageVideoSwap.replacingOccurrences(of: "\"", with: "", options: .literal, range: nil)
                     let linkImagePro = removeSuot.replacingOccurrences(of: "/var/www/build_futurelove", with: "https://futurelove.online", options: .literal, range: nil)
                     self.linkImagePro = linkImagePro
+                    print("image Pro: \(linkImagePro)")
                     if let url = URL(string: self.linkImagePro){
                         self.boyImage.af.setImage(withURL: url)
+                        
                     }
                     
                 }

@@ -7,102 +7,102 @@
 		<key>Alamofire.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>8</integer>
 		</dict>
 		<key>AlamofireImage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>18</integer>
 		</dict>
 		<key>CircleProgressView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>10</integer>
 		</dict>
 		<key>DeviceKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>12</integer>
 		</dict>
 		<key>DropDown.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>1</integer>
 		</dict>
 		<key>ExytePopupView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>2</integer>
 		</dict>
 		<key>HGCircularSlider.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>13</integer>
 		</dict>
 		<key>Kingfisher-Kingfisher.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Kingfisher.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>15</integer>
 		</dict>
 		<key>Pods-funnyface2222.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>6</integer>
 		</dict>
 		<key>R.swift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>17</integer>
 		</dict>
 		<key>SETabView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>7</integer>
 		</dict>
 		<key>SnapKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>20</integer>
 		</dict>
 		<key>SwiftKeychainWrapper.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>16</integer>
 		</dict>
 		<key>SwiftLint.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>SwiftVideoBackground.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>19</integer>
 		</dict>
 		<key>Swift_PageMenu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>9</integer>
 		</dict>
 		<key>Toast-Swift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>5</integer>
 		</dict>
 		<key>TrailerPlayer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>14</integer>
 		</dict>
 		<key>WCLShineButton.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</dict>
 </dict>

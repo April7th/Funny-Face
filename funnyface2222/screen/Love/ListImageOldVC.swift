@@ -16,6 +16,7 @@ class ListImageOldVC: UIViewController {
     @IBOutlet weak var buttonBack: UIButton!
     var type:String = ""
     var listImage:[String] = [String]()
+    var imageDidSelect:String = String()
     @IBAction func backAppPro(){
         self.dismiss(animated: true)
     }
@@ -43,7 +44,11 @@ extension ListImageOldVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageDataDict:[String: String] = ["image": listImage[indexPath.row]]
+        
+        
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Notification_SEND_IMAGES"), object: nil, userInfo: imageDataDict)
+        
         self.dismiss(animated: true)
     }
     
@@ -71,9 +76,9 @@ extension ListImageOldVC: UICollectionViewDelegate, UICollectionViewDataSource {
             result in
             switch result {
             case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+                print("Task 2 done for: \(value.source.url?.absoluteString ?? "")")
             case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
+                print("Job 2 failed: \(error.localizedDescription)")
             }
         }
         return cell
